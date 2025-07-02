@@ -5,7 +5,7 @@ import ServiceContext from "../../Context/CreateContext/ServicesContext";
 
 const TabPanel = () => {
   const { User } = useContext(UserContext);
-  const {notification} = useContext(ServiceContext)
+  const { notification } = useContext(ServiceContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -45,13 +45,14 @@ const TabPanel = () => {
               {tab.icon}
             </span>
             {/*  */}
-            {tab.icon === "notifications" &&   notification > 0 && (
-              <div className="  absolute -translate-x-4 -translate-y-1.5 font-bold   bg-red-600 text-center w-4 h-4 rounded-full flex justify-center items-center text-white text-xs">
-                {
-                  notification.length
-                }
-              </div>
-            )}
+            {tab.icon === "notifications" &&
+              notification !== null &&
+              notification.length >
+                0(
+                  <div className="  absolute -translate-x-4 -translate-y-1.5 font-bold   bg-red-600 text-center w-4 h-4 rounded-full flex justify-center items-center text-white text-xs">
+                    {notification.length}
+                  </div>
+                )}
 
             {/*  */}
             <span className="text-sm font-medium">{tab.name}</span>
