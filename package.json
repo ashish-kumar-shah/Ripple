@@ -1,12 +1,11 @@
 {
   "name": "ripple",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "build": "npm install && npm install --prefix ./client && npm run build --prefix ./client && xcopy /E /I /Y .\\client\\build .\\build",
-    "dev": "npm run build && npm run start"
-  },
+  "main": "index.js","scripts": {
+  "start": "node index.js",
+  "build": "npm install --prefix ./client && npm run build --prefix ./client && cp -r ./client/build ./build"
+}
+
   "keywords": [],
   "author": "",
   "license": "ISC",
