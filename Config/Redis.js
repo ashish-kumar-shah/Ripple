@@ -1,6 +1,7 @@
 const { createClient } = require("redis");
-
+require('dotenv').config()
 const redisClient = createClient({
+  url: process.env.REDIS_URL,
   socket: {
     reconnectStrategy: retries => {
       if (retries > 10) return new Error("Redis reconnect limit reached");
