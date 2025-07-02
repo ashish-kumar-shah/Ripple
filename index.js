@@ -27,7 +27,7 @@ app.use(
   })
 );
 
-const clientBuildPath = path.resolve(__dirname, "./client/build");
+const clientBuildPath = path.resolve(__dirname, "./build");
 console.log(clientBuildPath);
 
 console.log(clientBuildPath);
